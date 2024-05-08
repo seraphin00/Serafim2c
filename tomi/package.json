@@ -1,0 +1,30 @@
+{
+    "name": "ball-bouncing-extension",
+    "displayName": "Ball Bouncing Extension",
+    "description": "Launches a ball bouncing around the corners of the page.",
+    "version": "1.0.0",
+    "publisher": "your-publisher-name",
+    "engines": {
+      "vscode": "^1.60.0"
+    },
+    "contributes": {
+      "webviews": {
+        "yourWebviewId": {
+          "path": "./index.html",
+          "title": "Ball Bouncing Extension"
+        }
+      }
+    },
+    "scripts": {
+      "vscode:prepublish": "tsc -p ./",
+      "compile": "tsc -watch -p ./"
+    },
+    "activationEvents": [
+      "onCommand:ballBouncingExtension.launch"
+    ],
+    "main": "./extension.js",
+    "dependencies": {
+      "@types/vscode": "^1.2.3"
+    }
+  }
+  
